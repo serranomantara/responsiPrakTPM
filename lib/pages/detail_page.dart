@@ -135,10 +135,10 @@ class _DetailPageState extends State<DetailPage> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF1E3A8A), // Blue-900
-              Color(0xFF3B82F6), // Blue-500
-              Color(0xFF60A5FA), // Blue-400
-              Color(0xFFDDD6FE), // Purple-200 (accent)
+              Color(0xFF1E3A8A), 
+              Color(0xFF3B82F6), 
+              Color(0xFF60A5FA), 
+              Color(0xFFDDD6FE), 
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -285,7 +285,6 @@ class _DetailPageState extends State<DetailPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Movie Poster and Basic Info Card
           Container(
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.95),
@@ -300,7 +299,6 @@ class _DetailPageState extends State<DetailPage> {
             ),
             child: Column(
               children: [
-                // Poster with rating badge
                 if (movie!.poster.isNotEmpty)
                   Container(
                     height: 320,
@@ -354,7 +352,6 @@ class _DetailPageState extends State<DetailPage> {
                     ),
                   ),
                 
-                // Movie Title and Info
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
                   child: Column(
@@ -370,7 +367,6 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                       const SizedBox(height: 12),
                       
-                      // Genre chips
                       if (movie!.genre.isNotEmpty)
                         Wrap(
                           spacing: 8,
@@ -395,7 +391,6 @@ class _DetailPageState extends State<DetailPage> {
                       
                       const SizedBox(height: 16),
                       
-                      // Movie Info Grid
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
@@ -424,7 +419,6 @@ class _DetailPageState extends State<DetailPage> {
           
           const SizedBox(height: 20),
           
-          // Cast Section
           if (movie!.cast.isNotEmpty) ...[
             Container(
               padding: const EdgeInsets.all(20),
@@ -477,7 +471,6 @@ class _DetailPageState extends State<DetailPage> {
             const SizedBox(height: 20),
           ],
           
-          // Description Section
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
