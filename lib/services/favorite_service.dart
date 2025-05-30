@@ -41,7 +41,6 @@ class FavoriteService {
         await prefs.setString(key, favoritesJson);
       }
     } catch (e) {
-      // Handle error silently
     }
   }
 
@@ -57,7 +56,6 @@ class FavoriteService {
       );
       await prefs.setString(key, favoritesJson);
     } catch (e) {
-      // Handle error silently
     }
   }
 
