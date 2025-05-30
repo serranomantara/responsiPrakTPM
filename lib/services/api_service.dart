@@ -7,7 +7,6 @@ class ApiService {
 
   static Future<List<Movie>> getMovies({String? genre, String? year, double? rating}) async {
     try {
-      // Construct the query parameters based on the input
       String query = '';
       if (genre != null) query += 'genre=$genre&';
       if (year != null) query += 'year=$year&';
