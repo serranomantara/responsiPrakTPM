@@ -46,10 +46,10 @@ class _RegisterPageState extends State<RegisterPage> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF1E3A8A), // Blue-900
-              Color(0xFF3B82F6), // Blue-500
-              Color(0xFF60A5FA), // Blue-400
-              Color(0xFFDDD6FE), // Purple-200 (accent)
+              Color(0xFF1E3A8A), 
+              Color(0xFF3B82F6), 
+              Color(0xFF60A5FA), 
+              Color(0xFFDDD6FE), 
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -89,7 +89,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Icon(
-                          Icons.person_add_rounded, // Icon untuk register
+                          Icons.person_add_rounded, 
                           size: 64, 
                           color: Colors.blue.shade700,
                         ),
