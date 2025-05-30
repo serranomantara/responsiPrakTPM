@@ -33,7 +33,6 @@ class MovieCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Movie Poster with gradient overlay and rating badge
               Expanded(
                 flex: 3,
                 child: Stack(
@@ -61,7 +60,6 @@ class MovieCard extends StatelessWidget {
                             )
                           : null,
                     ),
-                    // Gradient overlay
                     Positioned.fill(
                       child: Container(
                         decoration: BoxDecoration(
@@ -77,7 +75,6 @@ class MovieCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // Rating badge
                     Positioned(
                       top: 8,
                       right: 8,
@@ -114,7 +111,6 @@ class MovieCard extends StatelessWidget {
                   ],
                 ),
               ),
-              // Movie Info
               Expanded(
                 flex: 2,
                 child: Container(
@@ -126,7 +122,6 @@ class MovieCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Title
                       Text(
                         movie.title,
                         style: TextStyle(
@@ -139,7 +134,6 @@ class MovieCard extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       const SizedBox(height: 6),
-                      // Genre chips
                       if (movie.genre.isNotEmpty)
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -160,7 +154,6 @@ class MovieCard extends StatelessWidget {
                           ),
                         ),
                       const Spacer(),
-                      // Release date with icon
                       Row(
                         children: [
                           Icon(
