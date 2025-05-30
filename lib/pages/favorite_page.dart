@@ -94,10 +94,10 @@ class _FavoritePageState extends State<FavoritePage> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF1E3A8A), // Blue-900
-              Color(0xFF3B82F6), // Blue-500
-              Color(0xFF60A5FA), // Blue-400
-              Color(0xFFDDD6FE), // Purple-200 (accent)
+              Color(0xFF1E3A8A), 
+              Color(0xFF3B82F6), 
+              Color(0xFF60A5FA), 
+              Color(0xFFDDD6FE), 
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -215,7 +215,7 @@ class _FavoritePageState extends State<FavoritePage> {
 
     return Column(
       children: [
-        // Header with favorite count
+        
         Container(
           margin: const EdgeInsets.all(16),
           padding: const EdgeInsets.all(20),
@@ -272,7 +272,6 @@ class _FavoritePageState extends State<FavoritePage> {
           ),
         ),
         
-        // Movies Grid
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -296,7 +295,6 @@ class _FavoritePageState extends State<FavoritePage> {
                         builder: (context) => DetailPage(movieId: movie.id),
                       ),
                     );
-                    // Refresh favorites when returning from detail page
                     loadFavorites();
                   },
                 );
