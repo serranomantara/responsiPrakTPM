@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
   bool isLoading = true;
   String? error;
 
-  // Filter variables
   String? selectedGenre;
   String? selectedYear;
   double? selectedRating;
@@ -38,7 +37,6 @@ class _HomePageState extends State<HomePage> {
         error = null;
       });
 
-      // Pass the selected filters to the API call
       final movieList = await ApiService.getMovies(
         genre: selectedGenre,
         year: selectedYear,
@@ -142,10 +140,10 @@ class _HomePageState extends State<HomePage> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF1E3A8A), // Blue-900
-              Color(0xFF3B82F6), // Blue-500
-              Color(0xFF60A5FA), // Blue-400
-              Color(0xFFDDD6FE), // Purple-200 (accent)
+              Color(0xFF1E3A8A), 
+              Color(0xFF3B82F6), 
+              Color(0xFF60A5FA), 
+              Color(0xFFDDD6FE), 
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -167,7 +165,6 @@ class _HomePageState extends State<HomePage> {
   Widget _buildBody() {
     return Column(
       children: [
-        // Header Section
         Container(
           margin: const EdgeInsets.all(16),
           padding: const EdgeInsets.all(20),
@@ -202,7 +199,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 16),
-              // Filter Section
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
@@ -251,7 +247,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         
-        // Content Section
         Expanded(
           child: _buildContent(),
         ),
