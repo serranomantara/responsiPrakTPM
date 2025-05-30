@@ -3,7 +3,7 @@ class Movie {
   final String title;
   final String poster;
   final double rating;
-  final List<String> genre; // Ubah genre menjadi List<String>
+  final List<String> genre; 
   final String duration;
   final String description;
   final String director;
@@ -16,7 +16,7 @@ class Movie {
     required this.title,
     required this.poster,
     required this.rating,
-    required this.genre,   // Pastikan genre adalah List<String>
+    required this.genre,   
     required this.duration,
     required this.description,
     required this.director,
@@ -34,16 +34,16 @@ class Movie {
           ? double.tryParse(json['rating'] ?? '0') ?? 0.0
           : json['rating']?.toDouble() ?? 0.0,
       genre: json['genre'] is List
-          ? List<String>.from(json['genre'])  // Perbaiki genre menjadi List<String>
-          : [],  // Pastikan genre adalah List<String>
+          ? List<String>.from(json['genre']) 
+          : [],  
       duration: json['duration'] ?? '',
       description: json['description'] ?? '',
       director: json['director'] ?? '',
       language: json['language'] ?? '',
       releaseDate: json['release_date'] ?? '',
       cast: json['cast'] is List
-          ? List<String>.from(json['cast'])  // Perbaiki cast menjadi List<String>
-          : [],  // Pastikan cast adalah List<String>
+          ? List<String>.from(json['cast'])  
+          : [],  
     );
   }
 
